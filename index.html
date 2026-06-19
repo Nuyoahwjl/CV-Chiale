@@ -452,7 +452,6 @@
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <!-- <a href="#leadership">Leadership</a> -->
         <a href="#honors">Honors</a>
       </nav>
     </aside>
@@ -461,13 +460,17 @@
       <section id="about">
         <h1>Jiale <span class="accent">Wang</span></h1>
         <p class="contact">
-          Hongshan District, Wuhan · +86 153-9156-0195 ·
+          Wuhan, China · Born Dec 2005 · +86 153-9156-0195 ·
           <a href="mailto:chia.le@foxmail.com">chia.le@foxmail.com</a>
         </p>
         <p class="lead">
-          I am a third-year undergraduate in Computer Science and Technology at <strong>Huazhong University of Science and Technology (HUST)</strong>, with an expected graduation in 2027.
-          My research interests include <strong>AI</strong>, <strong>agent</strong>, and <strong>large language models(LLMs)</strong>.
-          I am currently preparing for recommendation-based postgraduate admission and aim to pursue long-term, research-driven work on impactful problems.
+          I am an undergraduate in <strong>Computer Science and Technology</strong> at
+          <strong>Huazhong University of Science and Technology (HUST)</strong>, expected to graduate in 2027.
+          I rank <strong>11 / 442</strong> in my major (top <strong>2.5%</strong>) with a weighted average score of
+          <strong>92.5</strong>. My work focuses on <strong>LLM agents</strong>, <strong>agent runtime systems</strong>,
+          <strong>retrieval-augmented generation</strong>, and <strong>ML systems</strong>, with recent projects covering
+          healthcare multi-agent RAG, weakly supervised fine-grained visual recognition, heterogeneous resource-aware
+          distributed agent systems, and structure-semantic co-optimization for tool-calling LLM agents.
         </p>
       </section>
 
@@ -478,10 +481,10 @@
             <h3>Huazhong University of Science and Technology (HUST)</h3>
             <span class="date">Sep 2023 - Present</span>
           </div>
-          <div class="org">Undergraduate in Computer Science and Technology</div>
+          <div class="org">B.Eng. in Computer Science and Technology · Class of 2027</div>
           <ul>
-            <li><strong>Average Score:</strong> 92.5</li>
-            <li><strong>Rank:</strong> 11 / 442 (Top 2.5%)</li>
+            <li><strong>Weighted Average Score:</strong> 92.5</li>
+            <li><strong>Major Rank:</strong> 11 / 442 (Top 2.5%)</li>
             <li><strong>English Proficiency:</strong> CET-4: 594, CET-6: 517</li>
             <li><strong>Key Courses:</strong> C Programming (99), Discrete Mathematics (96), Algorithm Analysis and
               Design (92), Computer Systems (97), Computer Organization (93), Computer Vision (96), C++ (91), Machine
@@ -559,59 +562,79 @@
       </section>
 
       <section id="projects">
-        <h2>Projects 🔬</h2>
+        <h2>Research &amp; Projects 🔬</h2>
 
         <article class="entry">
           <div class="row-head">
             <h3>Intelligent Agent Design and Deployment for Healthcare</h3>
-            <span class="date">Apr 2025 - May 2025</span>
+            <span class="date">Apr 2025 - Jun 2025</span>
           </div>
           <div class="org">Project Lead</div>
-          <p class="project-desc">I led the end-to-end development of a healthcare-oriented multi-agent system. I designed a
-            lightweight <strong>AgentOS</strong> framework (Plan/Tool/Memory/Action) extended with inter-agent messaging and
-            shared context, and built a hybrid RAG pipeline combining BM25 sparse retrieval, dense vector search, and RRF
-            fusion with query decomposition, medical synonym expansion, and <strong>bge-reranker-v2-m3</strong> two-stage
-            reranking. I architected a Coordinator + four-specialist-agent workflow (symptom analysis, risk assessment,
-            recommendation generation, safety validation) with a self-reflection loop for iterative correction, alongside a
-            rule-based safety guardrail engine for contraindication detection and citation tracking that traces every
-            recommendation back to a retrieved document or clinical guideline. The resulting system is <span
-              class="hl">grounded, auditable, and deployment-ready</span> for real clinical scenarios.</p>
+          <p class="project-desc">I independently designed and implemented a lightweight <strong>AgentOS</strong>
+            framework for healthcare question answering, centered on extensible <strong>Plan</strong>,
+            <strong>Tool</strong>, <strong>Memory</strong>, and <strong>Action</strong> modules. After analyzing the
+            limitations of existing frameworks such as LangChain in modular decoupling, execution control, and
+            multi-agent collaboration, I extended the framework with inter-agent message passing and shared context.
+            At the retrieval layer, I built a medical knowledge base with hybrid BM25 sparse retrieval and dense vector
+            retrieval, used <strong>RRF</strong> fusion to improve recall for low-frequency medical terminology, and
+            introduced query decomposition, Chinese medical synonym expansion, and <strong>bge-reranker-v2-m3</strong>
+            two-stage reranking. The reasoning workflow uses a hierarchical Coordinator with four specialist agents for
+            symptom analysis, risk assessment, recommendation generation, and safety validation, plus a
+            <strong>Self-Reflection</strong> mechanism to reduce hallucination risk and improve answer reliability.</p>
+        </article>
+
+        <article class="entry">
+          <div class="row-head">
+            <h3>Weakly Supervised Fine-Grained Image Recognition</h3>
+            <span class="date">Sep 2025 - Oct 2025</span>
+          </div>
+          <div class="org">Project Lead</div>
+          <p class="project-desc">I led a two-stage training strategy for weakly supervised fine-grained recognition.
+            In the first stage, a <strong>ConvNeXtV2</strong> teacher model was independently fine-tuned; in the second
+            stage, a <strong>DINOv2</strong> student model was trained through cross-architecture knowledge distillation
+            with the teacher frozen. The objective combined KL-divergence distillation loss and GCE classification loss
+            with equal weights, using the AdamW optimizer, cosine annealing scheduling, and DDP multi-GPU parallel
+            training. The final model achieved <strong>97.3%</strong> accuracy on WebFG-400 and <strong>90.6%</strong>
+            accuracy on WebiNat-5000, earning a <span class="accent-note">National First Prize</span>.</p>
         </article>
 
         <article class="entry">
           <div class="row-head">
             <h3>Heterogeneous Resource-Aware Distributed Agent System</h3>
-            <span class="date">Jun 2025 - Sep 2025</span>
+            <span class="date">Jul 2025 - Dec 2025</span>
           </div>
-          <div class="org">Core Member</div>
-          <p class="project-desc">As a core contributor, I helped decompose agent workflows into fine-grained tasks and
-            compile them into heterogeneous DAGs across GPU, CPU, and I/O resources. I integrated a HACS-style scheduler
-            that places tasks based on compute, memory, and communication characteristics rather than coarse agent-level
-            rules. On a 32-node A100 cluster, the system achieved up to <strong>6.2x</strong> throughput improvement and
-            a <strong>71.2%</strong> reduction in P95 tail latency, with GPU memory utilization improved by
-            <strong>2x+</strong>. For dynamic workflows, P95 latency was reduced by <strong>22.3%</strong> vs. Ray and
-            <strong>47.8%</strong> vs. AutoGen. I also led external API standardization and benchmark evaluation on
-            GAIA, tau-bench, and OpenAGI, supporting a co-authored <strong><em>OSDI 2026</em></strong> submission and
-            open-source impact of <span class="hl">400+ GitHub stars</span>.
-          </p>
+          <div class="org">Co-author</div>
+          <p class="project-desc">As a co-author of a <strong><em>SC 2026</em></strong> submission, I contributed to
+            <strong>Maze</strong>, an open-source distributed system for agent workloads that has received
+            <span class="hl">400+ GitHub stars</span>. The system addresses coarse scheduling granularity,
+            inefficient heterogeneous resource utilization, and severe resource contention in existing frameworks such
+            as AutoGen. It refines scheduling granularity from the agent level to the task level, compiles complex agent
+            workflows into DAGs with GPU, CPU, and I/O resource constraints, and introduces a HACS scheduling algorithm
+            for resource-aware execution. On a 32-node A100 cluster, Maze achieved up to <strong>6.2x</strong> throughput
+            improvement, <strong>71.2%</strong> lower P95 tail latency, and over <strong>2x</strong> higher GPU memory
+            utilization. Under dynamic workflows, P95 latency was reduced by <strong>22.3%</strong> compared with Ray and
+            <strong>47.8%</strong> compared with AutoGen. I was primarily responsible for external API design and
+            standardization, including workflow creation, task registration, and resource semantic declarations, and I
+            conducted systematic benchmark evaluations on GAIA, tau-bench, and OpenAGI.</p>
           <p><a class="project-link" href="https://github.com/maze-agent/Maze" target="_blank" rel="noreferrer">GitHub:
               maze-agent/Maze</a></p>
         </article>
 
         <article class="entry">
           <div class="row-head">
-            <h3>Weakly Supervised Fine-Grained Recognition (National First Prize)</h3>
-            <span class="date">Oct 2025 - Nov 2025</span>
+            <h3>MotifAgent: Structure-Semantic Separation for Tool-Calling LLM Agents</h3>
+            <span class="date">Mar 2026 - Present</span>
           </div>
-          <div class="org">Project Lead</div>
-          <p class="project-desc">I designed and led a two-stage, cross-architecture knowledge distillation pipeline,
-            where a fine-tuned ConvNeXtV2 teacher supervised a DINOv2 student under a joint KL-divergence and GCE
-            objective. With AdamW optimization, cosine annealing, and DDP multi-GPU training, the model achieved
-            <strong>97.3%</strong> accuracy on WebFG-400 and <strong>90.6%</strong> on WebiNat-5000. This work earned a
-            <span class="accent-note">National First Prize</span> and demonstrated that a carefully engineered training
-            strategy can deliver both <span class="hl">strong generalization</span> and <span
-              class="hl">state-of-the-art competitive performance</span>.
-          </p>
+          <div class="org">Co-first Author</div>
+          <p class="project-desc">As a co-first author of an <strong><em>ATC 2026</em></strong> submission, I proposed
+            <strong>MotifAgent</strong>, an algorithm-system co-design framework for tool-calling LLM agents. At the
+            algorithmic level, MotifAgent separates reusable and verifiable execution structures from step-by-step LLM
+            decision making, allowing the runtime to execute stable control flow while the LLM focuses on semantic
+            uncertainty. At the system level, it exposes structural information from agent execution to the LLM serving
+            backend to improve scheduling, cache retention, and end-to-end service efficiency. I conducted systematic
+            evaluations on APIBank, tau-bench, and AppWorld. Compared with ReAct-style agents, the framework preserves
+            task effectiveness while substantially reducing LLM calls and token consumption, and service replay
+            experiments show improved tail latency and task-level goodput.</p>
         </article>
       </section>
 
@@ -619,7 +642,8 @@
         <h2>Honors 🏅</h2>
         <article class="entry">
           <ul>
-            <li>Merit Student and National Encouragement Scholarship (Sep 2024, Sep 2025)</li>
+            <li>Merit Student (Sep 2024, Sep 2025)</li>
+            <li>National Encouragement Scholarship (Sep 2024, Sep 2025)</li>
             <li>Outstanding Communist Youth League Member (May 2024, May 2025)</li>
             <li>Huawei Scholarship (Nov 2025)</li>
             <li>HUST Outstanding Undergraduate (Dec 2025)</li>
