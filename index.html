@@ -345,8 +345,12 @@
       max-width: 980px;
     }
 
+    .project-desc strong {
+      color: var(--accent-dark);
+    }
+
     .hl {
-      color: #b25f1c;
+      color: var(--accent-dark);
       font-weight: 700;
     }
 
@@ -358,7 +362,8 @@
       text-underline-offset: 3px;
     }
 
-    .project-link:hover {
+    .project-link:hover,
+    .project-link:focus-visible {
       text-decoration: underline;
     }
 
@@ -453,6 +458,7 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#honors">Honors</a>
+        <a href="https://blog.wangjiale.xyz" target="_blank" rel="noopener noreferrer">Blog ↗</a>
       </nav>
     </aside>
 
@@ -466,8 +472,7 @@
         <p class="lead">
           I am an undergraduate majoring in <strong>Computer Science and Technology</strong> at
           <strong>Huazhong University of Science and Technology (HUST)</strong>, expected to graduate in 2027.
-          And I will join <strong>Zhejiang University (ZJU)</strong> as a Ph.D. student. My work focuses on <strong>LLM Agent</strong> and <strong>Agent System</strong>
-          , with recent projects covering healthcare multi-agent RAG, heterogeneous resource-aware distributed agent systems, and structure-semantic co-optimization for tool-calling LLM agents.
+          And I will join <strong>Zhejiang University (ZJU)</strong> as a Ph.D. student. My work focuses on <strong>LLM Agent</strong> and <strong>Agent System</strong>.
         </p>
       </section>
 
@@ -505,66 +510,26 @@
         <h2>Skills 🛠️</h2>
         <article class="entry">
           <div class="skills-icon-wall">
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/react.svg" alt="React"
-                loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/vue.svg" alt="Vue"
-                loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/typescript-icon.svg"
-                alt="TypeScript" loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/javascript.svg"
-                alt="JavaScript" loading="lazy" /></div>
             <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/html-5.svg" alt="HTML5"
                 loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/css-3.svg" alt="CSS3"
-                loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/bootstrap.svg"
-                alt="Bootstrap" loading="lazy" /></div>
             <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/git-icon.svg" alt="Git"
                 loading="lazy" /></div>
             <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/nodejs-icon.svg"
                 alt="Node.js" loading="lazy" /></div>
             <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/npm.svg" alt="NPM"
                 loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/docker-icon.svg"
-                alt="Docker" loading="lazy" /></div>
             <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/cloudflare.svg"
                 alt="Cloudflare" loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/mysql.svg" alt="MySQL"
-                loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/mongodb-icon.svg"
-                alt="MongoDB" loading="lazy" /></div>
             <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/python.svg" alt="Python"
-                loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/pandas-icon.svg"
-                alt="Pandas" loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/numpy-icon.svg" alt="NumPy"
                 loading="lazy" /></div>
             <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/jupyter.svg" alt="Jupyter"
                 loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/tensorflow.svg"
-                alt="TensorFlow" loading="lazy" /></div>
             <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/pytorch.svg" alt="PyTorch"
-                loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/opencv.svg" alt="OpenCV"
-                loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/threejs.svg" alt="Three.js"
-                loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/markdown.svg" alt="Markdown"
                 loading="lazy" /></div>
             <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/github.svg" alt="GitHub"
                 loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/java.svg" alt="Java"
-                loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/c.svg" alt="C"
-                loading="lazy" /></div>
             <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/c-plusplus.svg" alt="C++"
                 loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/visual-studio-code.svg"
-                alt="VS Code" loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/hugo-icon.svg" alt="Hugo"
-                loading="lazy" /></div>
-            <div class="skill-icon-cell"><img class="skill-icon" src="./assets/skills-icons/wordpress-icon.svg"
-                alt="WordPress" loading="lazy" /></div>
           </div>
         </article>
       </section>
@@ -578,17 +543,10 @@
             <span class="date">Apr 2025 - Jun 2025</span>
           </div>
           <div class="org">Project Lead</div>
-          <p class="project-desc">I independently designed and implemented a lightweight <strong>AgentOS</strong>
-            framework for healthcare question answering, centered on extensible <strong>Plan</strong>,
-            <strong>Tool</strong>, <strong>Memory</strong>, and <strong>Action</strong> modules. After analyzing the
-            limitations of existing frameworks such as LangChain in modular decoupling, execution control, and
-            multi-agent collaboration, I extended the framework with inter-agent message passing and shared context.
-            At the retrieval layer, I built a medical knowledge base with hybrid BM25 sparse retrieval and dense vector
-            retrieval, used <strong>RRF</strong> fusion to improve recall for low-frequency medical terminology, and
-            introduced query decomposition, Chinese medical synonym expansion, and <strong>bge-reranker-v2-m3</strong>
-            two-stage reranking. The reasoning workflow uses a hierarchical Coordinator with four specialist agents for
-            symptom analysis, risk assessment, recommendation generation, and safety validation, plus a
-            <strong>Self-Reflection</strong> mechanism to reduce hallucination risk and improve answer reliability.</p>
+          <p class="project-desc">I independently built a modular <strong>AgentOS</strong> for healthcare question
+            answering, combining hybrid retrieval, <strong>RRF</strong> fusion, and reranking. A coordinator orchestrates
+            four specialist agents, with shared context and <strong>Self-Reflection</strong> to improve answer
+            reliability.</p>
         </article>
 
         <article class="entry">
@@ -597,18 +555,12 @@
             <span class="date">Jul 2025 - Dec 2025</span>
           </div>
           <div class="org">Co-author</div>
-          <p class="project-desc">As a co-author of a <strong><em>SC 2026</em></strong> accepted paper, I contributed to
-            <strong>Maze</strong>, an open-source distributed system for agent workloads that has received
-            <span class="hl">600+ GitHub stars</span>. The system addresses coarse scheduling granularity,
-            inefficient heterogeneous resource utilization, and severe resource contention in existing frameworks such
-            as AutoGen. It refines scheduling granularity from the agent level to the task level, compiles complex agent
-            workflows into DAGs with GPU, CPU, and I/O resource constraints, and introduces a HACS scheduling algorithm
-            for resource-aware execution. On a 32-node A100 cluster, Maze achieved up to <strong>6.2x</strong> throughput
-            improvement, <strong>71.2%</strong> lower P95 tail latency, and over <strong>2x</strong> higher GPU memory
-            utilization. Under dynamic workflows, P95 latency was reduced by <strong>22.3%</strong> compared with Ray and
-            <strong>47.8%</strong> compared with AutoGen. I was primarily responsible for external API design and
-            standardization, including workflow creation, task registration, and resource semantic declarations, and I
-            conducted systematic benchmark evaluations on GAIA, tau-bench, and OpenAGI.</p>
+          <p class="project-desc">Co-author of an accepted
+            <strong><em><a class="project-link" href="https://sc26.supercomputing.org/" target="_blank" rel="noopener noreferrer">SC 2026</a></em></strong>
+            paper on <strong>Maze</strong>, an open-source distributed agent system with <span class="hl">600+ GitHub stars</span>.
+            Its resource-aware task scheduling achieved up to <strong>6.2x</strong> throughput and
+            <strong>71.2%</strong> lower P95 latency on a 32-node A100 cluster. I designed external APIs and
+            conducted benchmark evaluations.</p>
           <p><a class="project-link" href="https://github.com/maze-agent/Maze" target="_blank" rel="noreferrer">GitHub:
               maze-agent/Maze</a></p>
         </article>
@@ -619,15 +571,12 @@
             <span class="date">Mar 2026 - Present</span>
           </div>
           <div class="org">Co-first Author</div>
-          <p class="project-desc">As a co-first author of a <strong><em>SIGOPS ATC 2026</em></strong> accepted paper, I proposed
-            <strong>MotifAgent</strong>, an algorithm-system co-design framework for tool-calling LLM agents. At the
-            algorithmic level, MotifAgent separates reusable and verifiable execution structures from step-by-step LLM
-            decision making, allowing the runtime to execute stable control flow while the LLM focuses on semantic
-            uncertainty. At the system level, it exposes structural information from agent execution to the LLM serving
-            backend to improve scheduling, cache retention, and end-to-end service efficiency. I conducted systematic
-            evaluations on APIBank, tau-bench, and AppWorld. Compared with ReAct-style agents, the framework preserves
-            task effectiveness while substantially reducing LLM calls and token consumption, and service replay
-            experiments show improved tail latency and task-level goodput.</p>
+          <p class="project-desc">Co-first author of an accepted
+            <strong><em><a class="project-link" href="https://atc.sigops.org/2026/" target="_blank" rel="noopener noreferrer">SIGOPS ATC 2026</a></em></strong>
+            paper. I proposed <strong>MotifAgent</strong>, separating reusable execution structures from LLM decisions
+            to improve scheduling and caching. Evaluations on APIBank, tau-bench, and AppWorld showed fewer LLM calls
+            and lower token consumption than ReAct-style agents while preserving task effectiveness. Service replay improved
+            tail latency and goodput.</p>
         </article>
       </section>
 
